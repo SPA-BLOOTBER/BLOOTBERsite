@@ -1,0 +1,23 @@
+        <!-- Секция с командой -->
+        <section class="team">
+            <h2>Наша команда</h2>
+            <div class="team-member">
+                <img src="member1.jpg" alt="Член команды 1">
+                <h3>Имя 1</h3>
+                <p>Описание 1</p>
+            </div>
+            <div class="team-member">
+                <img src="member2.jpg" alt="Член команды 2">
+                <h3>Имя 2</h3>
+                <p>Описание 2</p>
+            </div>
+        </section>
+
+
+        <!-- Баннер -->
+        <section class="banner">
+            <div class="slide active">
+                <img src="FloppaRun\3DExperementinal.png" alt="Slide 1">
+                <div class="caption">Баг1</div>
+            </div>
+        </section>
