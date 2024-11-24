@@ -1,25 +1,4 @@
-// Скрипт для баннера
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-    });
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
-
-setInterval(nextSlide, 5000); // Смена слайдов каждые 5 секунд
-
-// Показать первый слайд при загрузке страницы
-showSlide(currentSlide);
-
-// Скрипт для открытия и закрытия информации о проекте
-function openProject(projectId) { 
+function openProject(projectId) {
     const projectDetail = document.getElementById('project-detail');
     const projectTitle = document.getElementById('project-title');
     const projectIcon = document.getElementById('project-icon');
@@ -27,24 +6,21 @@ function openProject(projectId) {
     const projectScreenshots = document.getElementById('project-screenshots');
     const downloadLink = document.getElementById('download-link');
 
+    // Пример данных проекта
     const projectData = {
         'project1': {
-            title: 'Floppa Run',
-            icon: 'FloppaRun/ava.png',
+            title: 'Проект 1',
+            icon: 'icon1.png',
             description: 'Описание проекта 1.',
-            screenshots: ['FloppaRun/screenshot1.jpg', 'FloppaRun/screenshot2.jpg', 'FloppaRun/screenshot3.jpg', 'FloppaRun/screenshot4.jpg', 'FloppaRun/3DExperementinal.png',
-                'FloppaRun/screenshot5.jpg', 'FloppaRun/screenshot6.jpg', 'FloppaRun/screenshot7.jpg', 'FloppaRun/screenshot8.jpg',
-                'FloppaRun/screenshot9.jpg', 'FloppaRun/screenshot10.jpg', 'FloppaRun/screenshot11.jpg', 'FloppaRun/screenshot12.jpg',
-                'FloppaRun/screenshot13.jpg', 'FloppaRun/screenshot14.jpg', 'FloppaRun/screenshot15.jpg',
-            ],
-            download: 'FloppaRun/Flopparun.apk'
+            screenshots: ['screenshot1-1.jpg', 'screenshot1-2.jpg', 'screenshot1-3.jpg'],
+            download: 'project1.zip'
         },
         'project2': {
-            title: 'Multitoilet',
+            title: 'Проект 2',
             icon: 'icon2.png',
             description: 'Описание проекта 2.',
             screenshots: ['screenshot2-1.jpg', 'screenshot2-2.jpg', 'screenshot2-3.jpg'],
-            download: 'Multitoilet/Multitoilet.apk'
+            download: 'project2.zip'
         },
         'project3': {
             title: 'Проект 3',
@@ -74,7 +50,7 @@ function openProject(projectId) {
         projectScreenshots.appendChild(img);
     });
 
-    downloadLink.href = project.download;
+    downloadLink.href = 'download.php?file=' + project.download;
 
     projectDetail.style.display = 'block';
 }
@@ -83,21 +59,3 @@ function closeProject() {
     const projectDetail = document.getElementById('project-detail');
     projectDetail.style.display = 'none';
 }
-
-
-// Скрипт для карты Google
-function initMap() {
-    const location = { lat: -25.344, lng: 131.036 };
-    const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: location
-    });
-    const marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
-}
-
-window.onload = function() {
-    showSlide(currentSlide);
-};

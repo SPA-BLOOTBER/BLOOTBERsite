@@ -1,108 +1,34 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOOTBER</title>
+    <title>Мой сайт</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>BLOOTBER'S PRODUCT</h1>
-            <p>Я в одиночку создаю удивительные игры. Еще я часто пояю и програмиюрую свои проекты. Да-да-да. Я типо scuf... А еще ялюблю шахматы. Вот</p>
-        </header>
-        <hr>
-        
-        <!-- Проекты -->
-        <section class="projects">
-            <div class="project-button" id="project1" onclick="openProject('project1')">
-                <img src="FloppaRun/preview.png" alt="Проект 1" width="400" height="600">
-                <span>Floppa Run</span>
-            </div>
-            <div class="project-button" id="project2" onclick="openProject('project2')">
-                <img src="Bcube/preview.png" alt="Проект 2" width="400" height="600">
-                <span>[B]CUBE</span>
-            </div>
-            <div class="project-button" id="project3" onclick="openProject('project3')">
-                <img src="Multitoilet/preview.png" alt="Проект 3" width="400" height="600">
-                <span>Multitoilet</span>
-            </div>
-            <div class="project-button" id="project4" onclick="openProject('project4')">
-                <img src="NewPreview.png" alt="Проект 4" width="400" height="600">
-                <span>Comming soon...</span>
-            </div>
-        </section>
-        
-        <!-- Дополнительный контент: отзывы -->
-        <section class="additional-content">
-            <h2>Отзывы клиентов</h2>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <p>"Этот человек создает потрясающие игры, которые по качеству превосходят многие многомиллионные AAA-проекты. Его игры намного лучше, чем Skyrim или Cyberpunk. Бюджет его игр значительно больше, что позволяет ему разрабатывать уникальные и впечатляющие проекты. Он даже создал чат GPT с расширенными возможностями. Я считаю, что это достаточно веские причины, чтобы предпочесть его работы другим крупным компаниям."</p>
-                    <span>- MARKeting715</span>
-                </div>
-                <div class="testimonial">
-                    <p>"С друзьями у нас теперь есть традиция — вечера Multitoilet. Столько смеха и веселья мы давно не испытывали! Отличный способ провести время в компании."</p>
-                    <span>- Leaf_an</span>
-                </div>
-                <div class="testimonial">
-                    <p>"Эта игра — топ! В [B]CUBE можно создать свой мир. Игра реально затягивает, возможностей море. Рекомендую всем, кто любит что-то строить"</p>
-                    <span>- DrFozzz</span>
-                </div>
-                <div class="testimonial">
-                    <p>"Не могу оторваться от Floppa Run! Этот платформер – имба. Легко научиться, но сложно мастерски пройти. Прямо возвращает меня в детство!"</p>
-                    <span>- diskonekt043</span>
-                </div>
-                <div class="testimonial">
-                    <p>"[B]CUBE — это реально кайф. Строишь, что хочешь, фантазия не ограничена. Прострал несколько часов, постоянно что-то новое придумываю. Советую всем"</p>
-                    <span>- Clehroyal</span>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Новости -->
-        <section class="news">
-            <h2>Последние новости</h2>
-            <article class="news-item">
-                <h3>Создание сайта </h3>
-                <p>Я начал делать сайт...</p>
-                <a href="CompanyNews\News1\news.html">Читать дальше</a>
-            </article>
-            <article class="news-item">
-                <h3>Unity сломиали все опять</h3>
-                <p>Я не могу сбилдить игру на unity...</p>
-                <a href="CompanyNews\News2\news.html">Читать дальше</a>
-            </article>
-        </section>
-        
-        <!-- Форма обратной связи -->
-        <section class="contact-form">
-            <h2>Свяжитесь с нами</h2>
-            <form action="submit_form.php" method="post">
-                <label for="name">Имя:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Сообщение:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Отправить</button>
-            </form>
-        </section>
-        
-        <!-- Социальные сети -->
-        <footer>
-            <a href="" target="_blank">Telegram</a>
-            <a href="" target="_blank">Discord</a>
-            <a href="https://www.tiktok.com/@blootber7?lang=ru-RU" target="_blank">TikTok</a>
-            <a href="https://www.youtube.com/@blootber-spa" target="_blank">YouTube</a>
-            <a href="https://www.instagram.com/blootber7/" target="_blank">Instagram</a>
-            <a href="https://x.com/BLOOTBER515" target="_blank">X</a>
-            <a href="https://steamcommunity.com/id/BLOOTBER/" target="_blank">Steam</a>
-            <a href="https://github.com/SPA-BLOOTBER" target="_blank">GitHub</a>
-        </footer>
-    </div>
 
+<body>
+    <!-- Фон-картинка -->
+    <div class="background-image"></div>
+
+    <header>
+        <h1>Название Компании</h1>
+        <p>Описание вашей компании.</p>
+    </header>
+
+    <hr>
+
+    <div class="projects">
+        <button class="project-btn" onclick="openProject('project1')">
+            <img src="FloppaRun\preview.png" alt="Проект 1">
+            Проект 1
+        </button>
+        <button class="project-btn" onclick="openProject('project2')">
+            <img src="Multitoilet\preview.png" alt="Проект 2">
+            Проект 2
+        </button>
+    </div>
 
     <!-- Панель с информацией о проекте -->
     <div class="project-detail" id="project-detail">
@@ -110,10 +36,20 @@
         <h2 id="project-title"></h2>
         <img id="project-icon" src="" alt="Иконка проекта">
         <p id="project-description"></p>
-        <div class="screenshots" id="project-screenshots"></div>
-        <a id="download-link" class="download-btn" href="" download>Скачать бета игры</a>
+        <div class="screenshots" id="project-screenshots">
+            <!-- Скриншоты будут динамически добавляться через JavaScript -->
+        </div>
+        <a id="download-link" class="download-btn" href="" download>Скачать игру</a>
     </div>
 
-    <script src="scripts.js"></script>
+    <!-- Социальные кнопки -->
+    <footer>
+        <a href="https://facebook.com" class="social-btn">Facebook</a>
+        <a href="https://twitter.com" class="social-btn">Twitter</a>
+        <a href="https://instagram.com" class="social-btn">Instagram</a>
+    </footer>
+
+    <script src="script.js"></script> <!-- Убедитесь, что файл подключен правильно -->
 </body>
+
 </html>
